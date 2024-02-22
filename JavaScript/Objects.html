@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <script>
+        /* 
+            Objects:
+            - Data type where values are stored in 
+            'key: value' format
+        */
+
+        // var harshitDetails = {
+        //     firstName: 'Harshit',
+        //     lastName: 'Gautam',
+        //     class: 9
+        // }
+        // console.log(harshitDetails)
+        // const x = JSON.stringify(harshitDetails)
+        // console.log(x)
+        // const y = JSON.parse(x)
+        // console.log(y)
+
+        // # Access Object property value
+        // Way 1: Using square bracket and key name
+        // console.log(harshitDetails['firstName'])
+
+        // Way 2: Using the dot operator
+        // console.log(harshitDetails.firstName)
+
+        // # Adding a new property
+        // harshitDetails.batch = 'JAN Batch'
+        // console.log(harshitDetails)
+
+        // # Delete a property
+        // delete harshitDetails.class
+        // console.log(harshitDetails)
+
+        // # Convert object to string
+        // JSON.stringify()
+
+        // # Convert string to object
+        // JSON.parse()
+
+        // JSON: JavaScript Object Notation
+
+        // Object: Inbuilt Constructor for Object data type
+        // .keys() -> Return array of all keys
+        // .values() -> Return array of all values
+        // .entries() -> Return array of all key value pairs
+        
+        // var anshumanDetails = {
+        //     firstName: 'Anshuman',
+        //     lastName: 'Biswal',
+        //     city: 'Mumbai',
+        //     country: 'India'
+        // }
+        // console.log(Object.keys(anshumanDetails))
+        // console.log(Object.values(anshumanDetails))
+        // console.log(Object.entries(anshumanDetails))
+
+        // Iterate through object
+        // Way 1
+        // Object.keys(anshumanDetails).forEach(function(key) {
+        //     console.log(key, anshumanDetails[key])
+        // })
+
+        // Way 2
+        // for(key in anshumanDetails) {
+        //     console.log(key, anshumanDetails[key])
+        // }
+
+        // # Nested Object
+        // var anshumanDetails = {
+        //     firstName: 'Anshuman',
+        //     class: 10,
+        //     likesIcecream: true,
+        //     hobbies: ['Swimming', 'Reading Novels', 'Coding'],
+        //     address: {
+        //         houseNo: 5,
+        //         roadNo: 10,
+        //         city: 'Mumbai',
+        //         country: 'India',
+        //         pinCode: 10010
+        //     },
+        //     sayHi: function() {
+        //         console.log('Hi')
+        //     }
+
+        // } 
+
+        // console.log(anshumanDetails.hobbies[1])
+        // anshumanDetails.sayHi()
+
+        /*
+            Property: Key which has value other than functions
+            Method: Key which has value as function
+        */
+    </script>
+</head>
+<body>
+    <h1 id="test"></h1>
+    <script>
+        // document.getElementById('test').innerText = JSON.stringify(harshitDetails)
+    </script>
+</body>
+</html>

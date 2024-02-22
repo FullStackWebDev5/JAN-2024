@@ -1,0 +1,59 @@
+/* Element selector */
+h1 {
+    background-color: #0049B7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+    background: #1467e4;
+    color: white;
+    padding: 10px;
+}
+
+p {
+    padding: 20px;
+    border: 2px dotted black;
+}
+
+/* Group selector */
+/* p, td {
+    background-color: beige;
+} */
+
+/* Class selector */
+/* .class1 {
+    background-color: beige;
+} */
+
+/* ID selector */
+/* #header-paragraph {
+    padding: 20px;
+    border: 2px dotted black;
+} */
+
+/* #main-heading {
+    border: 10px solid black;
+} */
+
+/*  Chaining Selectors */
+/* #header-section p {
+    background-color: beige;
+} */
+
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+#first-section {
+    text-align: center;
+}
+
+img {
+    width: 500px;
+    height: 250px;
+}
+

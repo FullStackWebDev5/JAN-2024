@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div-1 {
+            background-color: red;
+            height: 80px;
+            width: 80px;
+        }
+
+        #heading-1 {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: 500px) {
+            #div-1 {
+                background-color: blue;
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+        @media screen and (min-height: 500px) {
+            #heading-1 {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div-1"></div>
+    <h1 id="heading-1">Media Query</h1>
+</body>
+</html>
+
+<!--
+    # Syntax:
+    @media screen and (min-width/max-width: [unit]) {
+        [styles for those screen resolutions]
+    }
+
+    min-width: atleast specific width
+    max-width: atmost specific width
+-->

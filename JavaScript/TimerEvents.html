@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Events</title>
+    <script>
+        /* 1000ms -> 1s */
+        /* setTimeout -> Execute code after specified time */
+        // setTimeout(function() {
+        //     console.log('Hi')
+        // }, 2000)
+
+         /* setInterval -> Execute code repeatedly after specified time */
+        //  setInterval(function() {
+        //     console.log('Hi')
+        // }, 2000)
+        /* clearInterval -> Stop interval created by setInterval */
+
+        /* Countdown */
+        var startTime = 10
+        var timer = setInterval(function() {
+            startTime--
+            console.log(startTime)
+            if(startTime == 0) {
+                console.log('Rocket launch successful :)')
+                clearInterval(timer)
+            }
+        }, 1000)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
