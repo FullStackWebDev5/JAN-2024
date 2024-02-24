@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        #parent {
+            border: 1px solid black;
+            padding: 20px;;
+        }
+    </style>
+</head>
+<body onload="sayHi()">
+    <!-- <input 
+        type="text" 
+        id="full-name" 
+        placeholder="Enter your name" 
+        onclick="console.log('Hi')"
+    > -->
+    <!-- <input 
+        type="text" 
+        id="full-name" 
+        placeholder="Enter your name" 
+        ondblclick="console.log('Hi')"
+    > -->
+    <!-- <input 
+        type="text" 
+        id="full-name" 
+        placeholder="Enter your name" 
+        onmouseenter="sayHi()"
+    > -->
+    <!-- <input 
+        type="text" 
+        id="full-name" 
+        placeholder="Enter your name" 
+        onmouseout="sayHi()"
+    > -->
+    <!-- <input 
+        type="text" 
+        id="full-name" 
+        placeholder="Enter your name" 
+        onmousemove="sayHi()"
+    > -->
+    <!-- <input 
+        type="text" 
+        id="full-name" 
+        placeholder="Enter your name" 
+        onkeypress="sayHi()"
+    > -->
+    <!-- <input 
+        type="text" 
+        id="full-name" 
+        placeholder="Enter your name" 
+        onkeyup="sayHi()"
+    > -->
+    <!-- <input 
+        type="text" 
+        id="full-name" 
+        placeholder="Enter your name" 
+        onkeydown="sayHi()"
+    > -->
+
+    <!-- <input 
+        type="text" 
+        id="full-name" 
+        placeholder="Enter your name"
+    > -->
+
+    <div id="parent">
+        <button id="child">Click Me :)</button>
+    </div>
+    <script>
+        function sayHi() {
+            console.log('Hi')
+        }
+
+        // document.getElementById('full-name').addEventListener('click', function (event) {
+        //     console.log('Hi')
+        // })
+
+        // document.getElementById('full-name').addEventListener('mousemove', function (event) {
+        //     console.log('Hi')
+        // })
+
+        document.getElementById('parent').addEventListener('click', function (event) {
+            console.log(event)
+            console.log('Parent')
+        })
+
+        document.getElementById('child').addEventListener('click', function (event) {
+            console.log('Child')
+            event.stopPropagation()
+        })
+    </script>
+</body>
+</html>
+
+<!--
+    - Event Handling
+        - Event: Any minute activity performed by the user on the webpage
+            - Way 1: Event handlers as attributes (onclick, ondblclick, etc.)
+            - Way 2: DOM addEventListener method
+        - Event Bubbling/ Event Propogation
+            - Can be stopped from bubbling using event stopPropagation method
+-->
