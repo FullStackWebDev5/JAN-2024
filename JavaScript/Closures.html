@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam maxime in facere dolorem exercitationem debitis magni quia tenetur dolor. Nemo rem fuga ipsum nulla maxime possimus vel corporis ducimus quos aspernatur harum quasi tempora similique fugiat numquam qui saepe, odit eveniet nihil. Perspiciatis maiores laboriosam, illum harum debitis quas temporibus ipsa libero! Error, beatae ad laudantium deserunt incidunt unde enim modi aperiam nobis? Illum distinctio inventore ratione adipisci voluptatem rerum aliquam, perspiciatis odit nihil ipsum tempora facere ea dolorem sint, possimus similique! Maxime natus nobis eos blanditiis similique ad et dolore aliquid perferendis doloremque. Debitis, minus quia reiciendis necessitatibus beatae fuga quam, eos quis doloremque harum eaque itaque optio expedita velit quibusdam inventore at. Minus, neque sequi officiis rerum maxime ab. Atque perferendis rem voluptatum eos possimus labore? At deleniti ratione beatae. Perferendis rem deleniti labore asperiores, aliquam harum dignissimos earum voluptatum debitis consequuntur. Quas error voluptate laborum! Illum optio quasi molestiae suscipit quaerat consequatur eius quae exercitationem voluptatum reprehenderit aliquam animi quia error possimus voluptatibus, inventore sapiente ducimus ipsa. Ipsum eveniet culpa qui recusandae saepe hic autem laboriosam delectus, corrupti omnis ad mollitia, odio nemo dignissimos rerum a nulla sapiente voluptatum veritatis dolorum quis iusto vitae. Suscipit, incidunt vel?</p>
+    <script>
+        /* Window Object/ Browser Object Model (BOM) */
+        // console.log(window)
+
+        // window.alert('Hi')
+
+        /* var, let, const */
+        // var x = 10
+        
+        // {
+        //     var x = 20
+        //     console.log(x)
+        // }
+
+        // console.log(x)
+
+        // 3 types of scope: Block/Local, Function, Global
+
+        // let, const -> ( Block scope) EcmaScript 6 (ES6)
+
+        // let x = 10
+        
+        // {
+        //     let x = 20
+        //     console.log(x)
+        // }
+
+        // console.log(x)
+
+        // let y = 10
+        // y = 20
+        // console.log(y)
+
+        // const x = 10
+        // x = 20
+        // console.log(x)
+
+        // function abc() {
+        //     let y = 30
+        //     console.log(y)
+        // }
+        // abc()
+
+        // console.log(y)
+
+        // Self-invoking functions/ IIFE (Immediately Invoked Function Expression)
+
+        // (function sayHi(){
+        //     let x = 10
+        //     console.log(x + x)
+        // })()
+
+        // (function sum(a, b) {
+        //     console.log(a+b)
+        // })(5, 10)
+
+        // Closure: Inner function continues to have access to outer function variables even after the outer function has executed (Inner function + outer function variable = Closure)
+
+        // let x = 10
+        // function abc() {
+        //     console.log(x)
+        // }
+        // abc()
+
+        let outer = function() {
+            let x = 10
+            let inner = function () {
+                console.log(x)
+            }
+            return inner
+        }
+
+        let def = outer()
+        def()
+    </script>
+</body>
+</html>
