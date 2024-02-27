@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Apply Bind</title>
+    <script>
+        // call, apply, bind -> Method of functions
+
+        /*
+            Array
+            - Properties
+                - length
+            - Methods
+                - sort
+                - filter
+                - map
+                - forEach
+        */
+
+        /*
+            Function
+            - Methods
+                - call
+                - apply 
+                - bind
+        */
+
+        const ruchiDetails = {
+            firstName: 'Ruchi',
+            lastName: 'Bhalerao',
+            email: 'ruchi@gmail.com',
+        }
+
+        // const fullName = function(country) {
+        //     console.log(this.firstName + ' ' + this.lastName + ', ' + country)
+        // }
+
+        // fullName('India')
+
+        // fullName.call(ruchiDetails, 'India')
+        
+        // fullName.apply(ruchiDetails, ['India'])
+
+        const fullName = function() {
+            console.log(this.firstName + ' ' + this.lastName)
+        }
+        const updatedFullName = fullName.bind(ruchiDetails)
+        updatedFullName()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

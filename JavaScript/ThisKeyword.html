@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword</title>
+    <script>
+        // this keyword: Refers to current execution context
+        const ruchiDetails = {
+            firstName: 'Ruchi',
+            lastName: 'Bhalerao',
+            email: 'ruchi@gmail.com',
+            sayHi: function() {
+                console.log('Hi')
+            },
+            fullName: function() {
+                console.log(this.firstName + ' ' + this.lastName)
+            }
+        }
+        // console.log(ruchiDetails)
+        // ruchiDetails.sayHi()
+        // ruchiDetails.fullName()
+
+        // console.log(this)
+
+        // function sayHi() {
+        //     console.log(this)
+        // }
+        // sayHi()
+
+        // const darshitDetails = {
+        //     firstName: 'Ruchi',
+        //     lastName: 'Bhalerao',
+        //     marks: [95, 87, 100, 82, 75],
+        //     average: function() {
+        //         let total = 0
+        //         this.marks.forEach(function(mark) {
+        //             total += mark
+        //         })
+        //         console.log(total/this.marks.length)
+        //     }
+        // }
+
+        // darshitDetails.average()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
