@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+    <script>
+        // const promise1 = new Promise(function(resolve, reject){
+        //     setTimeout(function() {
+        //         reject('JanBatch')
+        //     }, 3000)
+        // })
+
+        // promise1
+        //     .then(function(resolvedResult) {
+        //         console.log('Resolved', resolvedResult)
+        //     })
+        //     .catch(function(rejectedResult) {
+        //         console.log('Rejected', rejectedResult)
+        //     })
+
+        // Async Await
+        // - Function is asynchronous (async keyword)
+        // - Await keyword - Return 'resolved' result of the promise
+
+        // async function test() {
+        //     try {
+        //         const resolvedResult = await promise1
+        //         console.log('Resolved', resolvedResult)
+        //     } catch (rejectedResult) {
+        //         console.log('Rejected', rejectedResult)
+        //     }
+        // }
+        // test()
+
+        /* --------- */
+        // Error Handling: Try Catch - Handling runtime errors
+        
+        console.log('Start')
+
+        try {
+            const num = 9
+            if(num % 2 != 0) {
+                // Custom error 
+                throw new Error('Odd numbers not allowed')
+            }
+
+            // Logic which only works for even numbers
+        } catch (error) {
+            console.log(error)
+        }
+
+        console.log('End')
+
+        /* ----------- */
+
+        // fetch('https://reqres.in/api/users')
+        //     .then(function(res) {
+        //         return res.json()
+        //     })
+        //     .then(function(res) {
+        //         console.log(res)
+        //     })
+        //     .catch(function(error) {
+        //         console.log(error)
+        //     })
+
+        // async function fetchUsers() {
+        //     try {
+        //         const res = await fetch('https://reqres.in/api/users')
+        //         const res2 = await res.json()
+        //         console.log(res2)
+        //     } catch(error) {
+        //         console.log(error)
+        //     }
+        // }
+        // fetchUsers()
+
+        /*
+            - Project Ideas
+                - Form Validation
+                - E-Commerce/ Social Media App (FE - HTML, CSS, JS; Bootstrap + JS)
+                - Timer/ Stopwatch/ Counter (Asychronous)
+
+            - Frameworks
+                - Bootstrap/ Material UI/ Ant-design/ Tailwind CSS
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
