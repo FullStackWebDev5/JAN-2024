@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        /* Arrays: Data structure which is a collection of elements */
+        // var x = [5, 2, 10, 8 , 9, 28379, 380]
+        // console.log(x)
+
+        // var x = ['Harsh', 'Vignesh', 'Ambreen']
+        // console.log(x)
+
+        // var x = [true, false, true, true]
+        // console.log(x)
+
+        // var x = [5, 'Harsh', 'Vignesh', true]
+        // console.log(x)
+
+        // var arr = [5, 2, 10, 8 , 9]
+        // console.log(array.length)
+
+        // Array index always starts from 0
+        // Accessing values using index
+        // console.log(array[0])
+        // console.log(array[2])
+        // console.log(array[4])
+
+        // var arr = ['Harsh', 'Vignesh', 'Ambreen']
+
+        /* Access array elements using loops/ Iterating through array using for loop */
+        // for(var i=0; i<arr.length; i++) {
+        //     console.log(arr[i])
+        // }
+
+        /*
+            Array
+            - Properties
+                - length
+            - Methods 
+                - forEach()
+                - filter()
+                - map()
+                - sort()
+                - find()
+        */
+
+        var arr = [5, 2, 4, 10, 3]
+        // foreach -> Iteration
+        // arr.forEach(function(element) {
+        //     console.log(element)
+        // });
+
+        // filter -> Filtering elements based on condition (Returns array)
+        // var filteredArray = arr.filter(function(element) {
+        //     return element % 2 == 0 // filter condition
+        // });
+
+        // map -> Return updated elements (Returns array)
+        // var newArray = arr.map(function(element) {
+        //     return element + 5
+        // });
+
+        // sort -> Sort in ascending or descending order (modifies existing array)
+        // arr.sort(function (a, b){
+        //     return a - b
+        // })
+        // a-b: Ascending order
+        // b-a: Descending order
+        // console.log(arr)
+
+        // find -> Finds element based on condition. If found, returns that element, else returns undefined. Returns first element if multiple elements match the condition
+        // var foundElement = arr.find(function(element) {
+        //     return element / 2 == 5 // find condition
+        // });
+
+        // console.log(foundElement)
+
+        var foundElement = arr.find(function(element) {
+            return element % 2 == 0 // find condition
+        });
+
+        console.log(foundElement)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

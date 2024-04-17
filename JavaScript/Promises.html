@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <script>
+        /* 
+            Synchronous/ Asynchronous
+
+            Promise
+            - 2 properties
+                - State
+                    - Pending
+                    - Fulfilled (Resolved)
+                    - Rejected
+                - Result
+
+            .then() callback -> Promise resolved
+            .catch() callback -> Promise rejected
+        */
+
+        // console.log('1')
+        // const promise1 = new Promise(function(resolve, reject){
+        //     setTimeout(function() {
+        //         console.log('Hi')
+        //         resolve()
+        //     }, 3000)
+        // })
+
+        // promise1
+        //     .then(function(result) {
+        //         // console.log('Resolved')
+        //         // console.log(result)
+        //         console.log('2')
+        //     })
+        //     .catch(function(result) {
+        //         // console.log('Rejected')
+        //         // console.log(result)
+        //     })
+
+        // Promise Chaining
+        // promise1
+        //     .then(function(result1) {
+        //         console.log('Resolved')
+        //         return result1
+        //     })
+        //     .then(function(result2) {
+        //         console.log(result2 + ' :)')
+        //     })
+        //     .catch(function(result) {
+        //         console.log('Rejected')
+        //         console.log(result)
+        //     })
+
+        // console.log('1')
+        // setTimeout(function() {
+        //     console.log('Hi')
+        // }, 3000)
+        // console.log('2')
+
+        // Fetch Method - API calls
+        // fetch('https://reqres.in/api/users')
+        //     .then(function(res) {
+        //         return res.json()
+        //     })
+        //     .then(function(res) {
+        //         console.log(res)
+        //     })
+        //     .catch(function(error) {
+        //         console.log(error)
+        //     })
+
+        /* Function returning promise */
+        const promise1 = (test) => new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(test)
+            }, 4000)
+        })
+
+        const promise2 = (test) => new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(test)
+            }, 2000)
+        })
+        
+        promise1(5)
+            .then((test) =>{
+                console.log('Promise 1 resolved')
+                console.log(test)
+                return promise2(test)
+            })
+            .then((test) =>{
+                console.log('Promise 2 resolved')
+                console.log(test)
+            })
+            .catch(() => console.log('Promise 1 rejected'))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!--
+    API: Application Programming Interface
+-->

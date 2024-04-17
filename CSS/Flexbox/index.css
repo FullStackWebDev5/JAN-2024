@@ -1,0 +1,44 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+}
+
+.child {
+    text-align: center;
+    height: max-content;
+    border: 1px dotted black;
+}
+
+#class1 {
+    flex-basis: 250px;
+}
+
+#class2 {
+    flex-basis: 250px;
+}
+
+#class3 {
+    flex-basis: 250px;
+}
+
+/*
+    - flex
+    - flex direction (row)
+    - flex wrap (nowrap)
+    - justify-content (Space along the Main axis)
+    - align-items (Space perpendicular the Main axis)
+    - flex-grow
+    - flex-shrink
+
+    flex-direction: row
+    - Main axis: Horizontal
+    flex-direction: column
+    - Main axis: Vertical
+*/

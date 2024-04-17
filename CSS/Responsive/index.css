@@ -1,0 +1,28 @@
+#container {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    background-color:aliceblue;
+}
+
+/* Mobile devices */
+@media screen and (max-width: 576px) {
+    #container {
+        text-align: left;
+    }
+
+    #img-1 {
+        width: 100%
+    }
+}
+
+/* Tablet devices */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #container {
+        text-align: left;
+    }
+
+    #img-1 {
+        width: 100%
+    }
+}

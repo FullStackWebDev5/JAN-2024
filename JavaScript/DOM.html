@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="main-heading">Animals</h1>
+    <h2>Wild Animals</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam minima culpa fugit sapiente possimus eos eius enim perferendis sequi asperiores.</p>
+    <h2>Domestic Animals</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis necessitatibus, error saepe aperiam mollitia aliquam distinctio neque cupiditate nulla adipisci.</p>
+    <p id="test"></p>
+    <p class="test-1"></p>
+    <p class="test-1"></p>
+    <script>
+        // document.getElementById('test').innerText = 'Animals'
+        // document.getElementById('test').innerHTML = '<b>Animals</b>'
+
+        // var test1Elements = document.getElementsByClassName('test-1')
+        // for(var i=0; i<test1Elements.length; i++) {
+        //     test1Elements[i].innerText = 'Fruits'
+        // }
+
+        // console.log(document.querySelector('#test'))
+
+        // Applying CSS to DOM elements using JS
+        // Way 1
+        // document.getElementById('main-heading').style.color = 'white'
+        // document.getElementById('main-heading').style.backgroundColor = 'black'
+
+        // Way 2
+        // document.getElementById('main-heading').style.cssText = 'color: white; background-color: black'
+    </script>
+</body>
+</html>
+
+<!--
+    - Document Object Model (DOM): 
+    Considers the HTML document tree as an object
+
+    - Access elements (nodes) in DOM
+        - getElementById
+        - getElementsByClassName
+        - getElementsByTagName
+        - document.querySelector()    
+-->

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callbacks and Callback Hell</title>
+  <script>
+    // Callbacks
+    // function abc(callback) {
+    //   console.log('abc')
+    //   callback()
+    // }
+
+    // abc(function () {
+    //   console.log('def')
+    // })
+
+    // function abc(callback) {
+    //   console.log('abc')
+    //   setTimeout(() => {
+    //     callback()
+    //   }, 5000)
+    // }
+
+    // abc(function () {
+    //   console.log('def')
+    // })
+
+    /*
+      1. Order Placed
+      2. After 2 seconds: Restaurant has accepted your order
+      3. After 1 seconds: Preparing your order ...
+      4. After 15 seconds: Packing your order ...
+      5. After 5 seconds: Order handed over to delivery person
+      6: After 12 seconds: Order delivered to your address! Enjoy your meal :)
+    */
+
+    // Callback Hells
+    // const placeOrder = () => {
+    //   console.log('Order Placed')
+    //   setTimeout(() => {
+    //     console.log('Restaurant has accepted your order')
+
+    //     setTimeout(() => {
+    //       console.log('Preparing your order ...')
+
+    //       setTimeout(() => {
+    //         console.log('Packing your order ...')
+
+    //         setTimeout(() => {
+    //           console.log('Order handed over to delivery person')
+
+    //           setTimeout(() => {
+    //             console.log('Order delivered to your address! Enjoy your meal :)')
+    //           }, 12000)
+    //         }, 5000)
+    //       }, 10000)
+    //     }, 1000)
+    //   }, 2000)
+    // }
+
+    const acceptOrder = (count) => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        document.getElementById('order-status-'+count).innerText='User '+ count + ': ' + ' Restaurant has accepted your order'
+        resolve(count)
+      }, 2000)
+    })
+
+    const prepareOrder = (count) => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        document.getElementById('order-status-'+count).innerText='User '+ count + ': ' + ' Preparing your order ...'
+        resolve(count)
+      }, 1000)
+    })
+
+    const packOrder = (count) => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        document.getElementById('order-status-'+count).innerText='User '+ count + ': ' + ' Packing your order ...'
+        resolve(count)
+      }, 10000)
+    })
+
+    const pickupOrder = (count) => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        document.getElementById('order-status-'+count).innerText='User '+ count + ': ' + ' Order handed over to delivery person'
+        resolve(count)
+      }, 5000)
+    })
+
+    const orderDelivered = (count) => new Promise((resolve, reject) => {
+      setTimeout(() => {
+        document.getElementById('order-status-'+count).innerText='User '+ count + ': ' + ' Order delivered to your address! Enjoy your meal :)'
+        resolve(count)
+      }, 12000)
+    })
+
+    let count = 0;
+
+    const placeOrder = () => {
+      count = count + 1;
+      document.getElementById('order-status-'+count).innerText='User '+ count + ': ' + ' Order Placed'
+
+      acceptOrder(count)
+        .then(prepareOrder)
+        .then(packOrder)
+        .then(pickupOrder)
+        .then(orderDelivered)
+        .then(() => console.log('User '+ count + ': ' + ' END'))
+        .catch(() => console.log('Something went wrong'))
+    }
+  </script>
+</head>
+<body>
+  <button onclick="placeOrder()">Place Order</button>
+  <div>
+    <p id="order-status-1"></p>
+    <p id="order-status-2"></p>
+  </div>
+</body>
+</html>
+
+<!--
+  - Storage in JS
+    - Call Stack
+    - Heap
+  - Event loop
+
+  Callback Hell
+-->

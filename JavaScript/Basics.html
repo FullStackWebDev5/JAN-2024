@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+    <script src="script1.js"></script>
+    <script>
+        // Declaration
+        // var x
+
+        // Initialization
+        // var x = 5
+
+        // Assignment
+        // x = 5
+
+        /*
+            var x = 4546
+            console.log(x)
+        */
+        // var x = 'bfjnkmg'
+        // console.log(x)
+
+        // var x = 10
+        // var student = null
+        // student = 'Alisha'
+        // console.log(student)
+        // console.log(x)
+
+        // var y = null
+        // console.log(y)
+
+        // console.log(typeof 5)
+        // console.log(typeof 'Grapes')
+        // console.log(typeof false)
+        // console.log(typeof undefined)
+        // console.log(typeof null) -> object
+
+        /* Arithmetic */
+        // console.log(2 + 5)
+        // console.log(2 - 5)
+        // console.log(2 * 5)
+        // console.log(2 / 5)
+        // console.log(2 % 5)
+
+        /* Comparison */
+        // console.log(2 > 5)
+        // console.log(2 < 5)
+        // console.log(2 >= 5)
+        // console.log(2 <= 5)
+        // console.log(2 == 5) // Equality Operator (Value)
+        // console.log(2 === 5) // Identical Operator (Type+Value)
+        // console.log(2 != 5) // Inequality Iperator
+        // console.log(2 !== 5) /// Unidentycal Operator
+
+        // console.log('5' === 5) // Type coercion
+
+        // console.log(5 > 2 && 100 > 20)
+        // console.log(5 > 2 || 10 > 20)
+        // console.log(!true)
+        // console.log(!false)
+        // console.log(!(10 > 5))
+
+        /* Conditional Statement */
+        // if(1 > 2) {
+        //     console.log('Yes')
+        // } else {
+        //     console.log('No')
+        // }
+
+        // if(3 > 2) {
+        //     console.log('Yes 1')
+        // } else if (-1 > 2) {
+        //     console.log('Yes 2')
+        // } else {
+        //     console.log('No')
+        // }
+
+        /* DOM: Document Object Model */
+    </script>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h3 id="heading-3"></h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolorum assumenda obcaecati voluptates, accusantium impedit mollitia autem tempora numquam sapiente tenetur perspiciatis totam placeat repellendus neque illo consectetur eius deserunt minus veniam facere? Soluta ipsum cupiditate molestiae recusandae dolore commodi eaque eius nulla ipsam ea, sequi repellendus libero ad nesciunt doloremque possimus a asperiores provident quo, illum accusamus? Quibusdam impedit nemo exercitationem asperiores, tempora atque architecto labore. Officia dolorum, facere incidunt numquam tempore quod nobis quis temporibus veritatis commodi, nihil magni distinctio. Numquam voluptate tempore dolores natus ullam reiciendis ducimus explicabo perferendis, quae aspernatur similique iusto cum vitae aliquid nobis tenetur. Beatae recusandae suscipit numquam itaque! Beatae temporibus molestias excepturi quae. Ipsum aliquid totam est repellendus, dolorum maxime adipisci consequatur sequi, officia sed iste quam repellat, nam perferendis? Tempora, deserunt excepturi fugit repudiandae distinctio suscipit quam ipsa quos dicta laborum dolorum doloribus aperiam, dolore praesentium odio rem optio eveniet architecto, reiciendis fuga nemo similique explicabo ad iure? Beatae facilis odio, explicabo quos expedita optio laboriosam ut eveniet. Perspiciatis, cum doloribus voluptatum accusantium exercitationem blanditiis autem modi quia itaque sequi doloremque eaque, eos nihil officiis alias natus eligendi ullam iste accusamus. Iusto cupiditate, nemo asperiores magni pariatur aliquam veritatis commodi eveniet.</p>
+    <p id="para-2"></p>
+    <script>
+        document.getElementById('heading-3').innerText = 'Heading 3'
+        document.getElementById('para-2').innerHTML = '<h2>Heading 2</h2>'
+    </script>
+</body>
+</html>
+
+<!--
+    ### JavaScript:
+
+    # Ways to add Javascript to HTML file
+    - Internal: script tag (Inside head/body)
+    - External: script tag (Extenal .js file)
+
+    # Data types in JS
+    - Primitive
+        - Number (Eg: 5, 6.9, -38754895.978, etc)
+        - String (Eg: 'a', 'Sachin', '', etc)
+        - Boolean (Eg: true/false)
+        - undefined (Default value for declared variables)
+        - null (Empty placeholder)
+    - Non-primitive
+        - Object
+
+    # Operators
+    - Assignment Operators
+    - Arithmetic Operators (+, -, *, /, %)
+    - Comparison Operators (>, <, >=, <=, ==, ===, !=, !==)
+    - Logical Operators (||, &&, !)
+        - AND (&&)
+            - T && T -> T
+            - T && F -> F
+            - F && T -> F
+            - F && F -> F
+        - OR (||)
+            - T || T -> T
+            - T || F -> T
+            - F || T -> T
+            - F || F -> F
+    - typeof: Use this keyword for returning data type of value
+    # Type coercion
+-->
